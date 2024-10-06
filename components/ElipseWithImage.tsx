@@ -14,6 +14,10 @@ const ElipseWithImage: React.FC<ElipseWithImageProps> = ({ imageSource }) => {
     );
 };
 
+
+const imgheight = 100
+const imgWidth = 100
+
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
@@ -22,15 +26,15 @@ const styles = StyleSheet.create({
         height: 100,
     },
     ellipse: {
-        width: 200,
-        height: 100,
+        width: imgWidth * 2,
+        height: imgheight / 2,
         backgroundColor: '#ccc',
         borderRadius: 100,
         position: 'absolute',
     },
     image: {
-        width: 100,
-        height: 100,
+        width: imgWidth,
+        height: imgheight,
         borderRadius: 50,
     },
 });

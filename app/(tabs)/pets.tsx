@@ -1,16 +1,20 @@
 import ElipseWithImage from "@/components/ElipseWithImage";
+import AngledEllipse from "@/components/Ellipse2";
+import SeparatorSpace from "@/components/SeparatorSpace";
 import { Button, Text, View } from "react-native";
 import { StyleSheet } from "react-native";
 
 export default function openPets() {
   return (
     <View>
+        <SeparatorSpace height={250}/>
         <View style={{justifyContent: 'center', alignItems:'center'}}>
-        <ElipseWithImage imageSource={require('@/assets/images/partial-react-logo.png')}/>
+        <AngledEllipse />
         </View>
+        <SeparatorSpace height={200}/>
       <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
         <View>
-          <Button title="feed" />
+          <Button title="feed" onPress={feed}/>
         </View>
         <View>
           <Button title="pet" />
@@ -21,6 +25,10 @@ export default function openPets() {
       </View>
     </View>
   );
+}
+
+function feed() {
+    
 }
 
 const styles = StyleSheet.create({
