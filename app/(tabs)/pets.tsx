@@ -1,8 +1,10 @@
-import ElipseWithImage from "@/components/ElipseWithImage";
+import { MMKV } from 'react-native-mmkv'
 import AngledEllipse from "@/components/Ellipse2";
 import SeparatorSpace from "@/components/SeparatorSpace";
 import { Button, Text, View } from "react-native";
 import { StyleSheet } from "react-native";
+
+export const storage = new MMKV()
 
 export default function openPets() {
   return (
@@ -28,7 +30,7 @@ export default function openPets() {
 }
 
 function feed() {
-    
+        
 }
 
 const styles = StyleSheet.create({
