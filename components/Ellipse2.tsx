@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, Image } from "react-native";
 import Svg, { Ellipse } from "react-native-svg";
 
-const AngledEllipseWithCharacter = () => {
+const AngledEllipseWithCharacter = ({filename = require('@/assets/images/icon.png')}) => {
   return (
     <View style={styles.container}>
       {/* Main Ellipse */}
@@ -29,7 +29,7 @@ const AngledEllipseWithCharacter = () => {
 
       {/* Character Image */}
       <Image
-        source={require("@/assets/images/react-logo.png")} // Adjust path to your character image
+        source={filename} // Adjust path to your character image
         style={styles.character}
         resizeMode="contain" // Ensure the image maintains aspect ratio
       />
